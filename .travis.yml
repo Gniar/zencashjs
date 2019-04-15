@@ -6,4 +6,4 @@ node_js:
   - "lts/dubnium"
   - "node"
 before_install:
-  - audit-ci -l
+  - audit-ci -m
