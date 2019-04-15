@@ -5,8 +5,3 @@ node_js:
   - "node"
 before_install:
   - npm i -g audit-ci && audit-ci -m
-install:
-  - npm install -g codecov
-script:
-  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
-  - codecov
