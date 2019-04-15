@@ -44,7 +44,8 @@
     "build": "babel src/ -d lib/",
     "dev": "babel --watch src/ -d lib/",
     "clean": "rm -rf ./lib && mkdir lib",
-    "test": "mocha"
+    "test": "mocha",
+    "audit": "audit-ci -l"
   },
   "devDependencies": {
     "audit-ci": "^1.6.0"
