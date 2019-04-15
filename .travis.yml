@@ -5,3 +5,5 @@ node_js:
   - "node"
 before_install:
   - npm i -g audit-ci && audit-ci -m
+after_success:
+  - npm run coverage
