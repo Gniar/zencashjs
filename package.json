@@ -7,6 +7,7 @@
   "author": "Kendrick Tan <kendricktan0814@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "audit-ci": "^1.6.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "8.0.2",
     "babel-loader": "7.1.2",
@@ -46,8 +47,5 @@
     "clean": "rm -rf ./lib && mkdir lib",
     "test": "mocha",
     "audit": "audit-ci -m"
-  },
-  "devDependencies": {
-    "audit-ci": "^1.6.0"
   }
 }
