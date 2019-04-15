@@ -1,6 +1,6 @@
 language: node_js
 before_install:
-  - npm i -g audit-ci && audit-ci -m
+  - npm run audit
 node_js:
   - "lts/boron"
   - "lts/carbon"
