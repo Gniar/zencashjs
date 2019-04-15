@@ -45,6 +45,6 @@
     "build": "babel src/ -d lib/",
     "dev": "babel --watch src/ -d lib/",
     "clean": "rm -rf ./lib && mkdir lib",
-    "test": "mocha"
+    "test": "nyc mocha"
   }
 }
