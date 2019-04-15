@@ -18,7 +18,7 @@
     "chai": "4.1.0",
     "coveralls": "^3.0.3",
     "create-hash": "1.2.0",
-    "create-hmac": "1.1.6",
+    "create-hmac": "1.1.7",
     "elliptic": "6.4.1",
     "eslint": "4.10.0",
     "eslint-config-standard": "10.2.1",
