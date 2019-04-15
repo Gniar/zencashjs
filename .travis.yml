@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-  - "lts/*"
+  - "lts/argon"
+  - "lts/boron"
+  - "lts/carbon"
+  - "lts/dubnium"
   - "node"
 before_install:
-  - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then npm i -g audit-ci && audit-ci -l; fi
+  - audit-ci -l

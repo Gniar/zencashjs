@@ -46,5 +46,7 @@
     "clean": "rm -rf ./lib && mkdir lib",
     "test": "mocha"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "audit-ci": "^1.6.0"
+  }
 }
