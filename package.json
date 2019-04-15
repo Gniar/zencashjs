@@ -35,7 +35,7 @@
     "mocha-webpack": "^1.1.0",
     "nyc": "^13.3.0",
     "pushdata-bitcoin": "1.0.1",
-    "safe-buffer": "5.1.1",
+    "safe-buffer": "5.1.2",
     "secp256k1": "3.6.2",
     "varint": "5.0.0",
     "varuint-bitcoin": "1.0.4",
