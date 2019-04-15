@@ -1,4 +1,4 @@
-# zencashjs ![build status](https://api.travis-ci.org/ZencashOfficial/zencashjs.svg?branch=master)
+# zencashjs ![build status](https://api.travis-ci.org/Gniar/zencashjs.svg?branch=master)
 Dead simple and easy to use JavaScript based library for zencash. Inspired by [pybitcointools](https://github.com/vbuterin/pybitcointools)
 
 # Example usage (Transparent address)
@@ -18,7 +18,7 @@ var zAddr = zencashjs.address.pubKeyToAddr(pubKey)
 // znnjppzJG7ajT7f6Vp1AD6SjgcXBVPA2E6c
 
 // It is imperative that the block used for bip115BlockHeight and bip115BlockHash has a sufficient number of
-// confirmations (recommded values: 150 to 600 blocks older than current BLOCKHEIGHT). If the block used for 
+// confirmations (recommded values: 150 to 600 blocks older than current BLOCKHEIGHT). If the block used for
 // the replay protection should get orphaned the transaction will be unspendable for at least 52596 blocks.
 // For details on the replay protection please see: https://github.com/bitcoin/bips/blob/master/bip-0115.mediawiki
 
