@@ -4,5 +4,6 @@ node_js:
   - "lts/dubnium"
   - "node"
 before_install:
-  - npm i -g audit-ci && audit-ci -m
-after_success: npm run coverage
+  - npm i -g audit-ci && audit-ci -l
+after_success:
+  - npm run coverage
