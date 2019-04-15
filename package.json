@@ -46,7 +46,7 @@
     "build": "babel src/ -d lib/",
     "dev": "babel --watch src/ -d lib/",
     "clean": "rm -rf ./lib && mkdir lib",
-    "test": "nyc --reporter=html --reporter=text mocha",
+    "test": "nyc mocha",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   }
 }
