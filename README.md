@@ -174,3 +174,5 @@ cd zencashjs
 yarn install
 yarn run [dev | build]
 ```
+
+//test
