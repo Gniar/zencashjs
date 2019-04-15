@@ -1,9 +1,9 @@
 language: node_js
+before_install:
+  - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then npm i -g audit-ci && audit-ci -m; fi
 node_js:
   - "lts/argon"
   - "lts/boron"
   - "lts/carbon"
   - "lts/dubnium"
   - "node"
-before_install:
-  - npm run audit
