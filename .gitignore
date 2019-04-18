@@ -64,3 +64,5 @@ typings/
 .idea/
 
 debugging.js
+
+lib
