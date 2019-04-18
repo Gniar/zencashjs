@@ -1,4 +1,4 @@
-# zencashjs [![Build Status](https://api.travis-ci.org/Gniar/zencashjs.svg?branch=master)](https://travis-ci.com/Gniar/zencashjs) [![Coverage Status](https://coveralls.io/repos/github/Gniar/zencashjs/badge.svg)](https://coveralls.io/github/Gniar/zencashjs)
+# zencashjs [![Build Status](https://api.travis-ci.org/Gniar/zencashjs.svg?branch=master)](https://travis-ci.com/Gniar/zencashjs)
 Dead simple and easy to use JavaScript based library for zencash. Inspired by [pybitcointools](https://github.com/vbuterin/pybitcointools)
 
 # Example usage (Transparent address)
