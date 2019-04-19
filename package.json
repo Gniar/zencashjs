@@ -51,6 +51,6 @@
     "clean": "rm -rf ./lib && mkdir lib",
     "upgrade-interactive": "npm-check --update",
     "test": "nyc mocha",
-    "coverage": "nyc report --reporter=text-lcov"
+    "coverage": "rm .coverage && nyc report --reporter=text-lcov > .coverage"
   }
 }
