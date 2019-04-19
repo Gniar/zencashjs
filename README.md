@@ -1,4 +1,4 @@
-# zencashjs [![Build Status](https://api.travis-ci.org/Gniar/zencashjs.svg?branch=master)](https://travis-ci.com/Gniar/zencashjs)
+# zencashjs [![Build Status](https://api.travis-ci.org/Gniar/zencashjs.svg?branch=master)](https://travis-ci.com/Gniar/zencashjs) [![Maintainability](https://api.codeclimate.com/v1/badges/c099ffcea4f4961a01cd/maintainability)](https://codeclimate.com/github/Gniar/zencashjs/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/c099ffcea4f4961a01cd/test_coverage)](https://codeclimate.com/github/Gniar/zencashjs/test_coverage)
 Dead simple and easy to use JavaScript based library for zencash. Inspired by [pybitcointools](https://github.com/vbuterin/pybitcointools)
 
 # Example usage (Transparent address)

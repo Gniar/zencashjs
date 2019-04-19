@@ -178,16 +178,22 @@ function signatureForm (
 
   newTx.ins[i].script = script
 
-  if (hashcode === zconstants.SIGHASH_NONE) {
-    newTx.outs = []
-  } else if (hashcode === zconstants.SIGHASH_SINGLE) {
-    newTx.outs = newTx.outs.slice(0, newTx.ins.length)
-    for (let j = 0; j < newTx.ins.length - 1; ++j) {
-      newTx.outs[j].satoshis = Math.pow(2, 64) - 1
-      newTx.outs[j].script = ''
-    }
-  } else if (hashcode === zconstants.SIGHASH_ANYONECANPAY) {
-    newTx.ins = [newTx.ins[i]]
+  switch(hashcode){
+    case zconstants.SIGHASH_NONE:
+      newTx.outs = []
+      break
+    case zconstants.SIGHASH_SINGLE:
+      newTx.outs = newTx.outs.slice(0, newTx.ins.length)
+      for (let j = 0; j < newTx.ins.length - 1; ++j) {
+        newTx.outs[j].satoshis = Math.pow(2, 64) - 1
+        newTx.outs[j].script = ''
+      }
+      break
+    case zconstants.SIGHASH_ANYONECANPAY:
+      newTx.ins = [newTx.ins[i]]
+      break
+    default:
+      break
   }
 
   return newTx
@@ -505,13 +511,13 @@ function applyMultiSignatures (
   // const signaturesFixed = pubKeys.map(pubKey => {
   //   const keyPair = secp256k1.keyFromPublic(pubKey)
 
-  //   var match    
+  //   var match
 
   //   unmatched.some((sig, i) => {
-  //     if (!sig) return false      
+  //     if (!sig) return false
   //   })
   // })
-  
+
   var redeemScriptPushDataLength = zbufferutils.getPushDataLength(redeemScript)
 
   // Lmao no idea, just following the source code
