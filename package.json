@@ -2,7 +2,7 @@
   "name": "zencashjs",
   "version": "v1.2.0",
   "description": "Dead easy to use Zencash JavaScript based library",
-  "main": "./lib/index.js",
+  "main": "lib/index.js",
   "repository": "https://github.com/ZencashOfficial/zencashjs",
   "author": "Kendrick Tan <kendricktan0814@gmail.com>",
   "license": "MIT",
