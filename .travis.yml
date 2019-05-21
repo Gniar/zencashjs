@@ -1,8 +1,12 @@
 language: node_js
 node_js:
-  - "lts/carbon"
-  - "lts/dubnium"
-  - "node"
+  - "6"
+  - "7"
+  - "8"
+  - "9"
+  - "10"
+  - "11"
+  - "12"
 before_install:
   - npm i -g audit-ci && audit-ci -l
 before_script:
