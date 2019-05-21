@@ -3,7 +3,7 @@ node_js:
   - "8"
   - "10"
   - "11"
-  - "12"
+  - "node"
 before_install:
   - npm i -g audit-ci && audit-ci -l
 before_script:
