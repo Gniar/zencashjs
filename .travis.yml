@@ -5,7 +5,7 @@ node_js:
   - "11"
   - "node"
 before_install:
-  - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then npm i -g audit-ci && audit-ci --report true; fi
+  - if [ "${TRAVIS_PULL_REQUEST}" == "true" ]; then npm i -g audit-ci && audit-ci --report true; fi
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
