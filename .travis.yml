@@ -5,7 +5,7 @@ node_js:
   - "11"
   - "node"
 before_install: >-
-  if [ "${TRAVIS_PULL_REQUEST}" == "true" ]; then npm i -g audit-ci && curl --request POST --header "Authorization: token $GITHUB_TOKEN" --data '{ "body": `audit-ci --report true` }' https://api.github.com/repos/Gniar/zencashjs/issues/40/comments; fi
+  if [ "${TRAVIS_PULL_REQUEST}" == "true" ]; then npm i -g audit-ci && curl --request POST --header "Authorization: token $GITHUB_TOKEN" --data '{ "body": `audit-ci --report true` }' https://api.github.com/repos/Gniar/zencashjs/issues/4X/comments; fi
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
