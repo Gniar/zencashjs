@@ -13,7 +13,6 @@ var zconfig = require('./config')
  * @return {Sting} Private key
  */
 function mkPrivKey (phrase: string): string {
-  console.log("travis pls do something...")
   return zcrypto.sha256(Buffer.from(phrase, 'utf-8'))
 }
 
