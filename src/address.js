@@ -6,6 +6,9 @@ var zcrypto = require('./crypto')
 var zopcodes = require('./opcodes')
 var zconfig = require('./config')
 
+
+const removeThisLater = () => {}
+
 /*
  * Makes a private key
  * @param {String phrase (Password phrase)
