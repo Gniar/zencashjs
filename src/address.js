@@ -6,13 +6,13 @@ var zcrypto = require('./crypto')
 var zopcodes = require('./opcodes')
 var zconfig = require('./config')
 
+
 /*
  * Makes a private key
  * @param {String phrase (Password phrase)
  * @return {Sting} Private key
  */
 function mkPrivKey (phrase: string): string {
-  console.log("hello")
   return zcrypto.sha256(Buffer.from(phrase, 'utf-8'))
 }
 
