@@ -7,14 +7,13 @@ var zopcodes = require('./opcodes')
 var zconfig = require('./config')
 
 
-const removeThisLater = () => {}
-
 /*
  * Makes a private key
  * @param {String phrase (Password phrase)
  * @return {Sting} Private key
  */
 function mkPrivKey (phrase: string): string {
+  console.log("travis is not building...")
   return zcrypto.sha256(Buffer.from(phrase, 'utf-8'))
 }
 
