@@ -46,6 +46,7 @@
     "yargs": "^13.2.4"
   },
   "scripts": {
+    "delete-this": "",
     "build": "babel src/ -d lib/",
     "dev": "babel --watch src/ -d lib/",
     "clean": "rm -rf ./lib && mkdir lib",
