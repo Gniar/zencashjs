@@ -10,7 +10,7 @@ before_install:
   - version=`node --version | grep -oP '(?<=v)\d*?(?=\.)'`
   - docker pull node:$version-alpine
   - docker run -d -p 127.0.0.1:80:4567 node:$version-alpine /bin/sh -c "cd /home/node && apk add git && git clone https://github.com/Gniar/zencashjs.git && cd zencashjs && npm install"
-  - docker run node:$version-alpine /bin/sh -c "npm run test"
+  - docker run node:$version-alpine /bin/sh -c "cd /home/node/zencashjs && npm run test"
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
