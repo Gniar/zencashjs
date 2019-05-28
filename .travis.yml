@@ -8,7 +8,7 @@ services:
   - docker
 before_install:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - version= `node --version | grep -oP '(?<=v)\d*?(?=\.)'`
+  - version=`node --version | grep -oP '(?<=v)\d*?(?=\.)'`
   - docker pull $version-alpine
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
