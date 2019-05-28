@@ -4,9 +4,12 @@ node_js:
   - "10"
   - "11"
   - "node"
+services:
+  - docker
 before_install:
-  - echo $NODE_VERSION
-
+  - version=`node --version | grep -oP '(?<=v)\d*?(?=\.)'`
+  - docker pull $version-alpine
+  - docker run -d -p 127.0.0.1:80:4567 $version-alpine /bin/sh -c "node --version"
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
