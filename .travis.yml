@@ -7,8 +7,8 @@ node_js:
 services:
   - docker
 before_install:
-  - alpine=`node --version | grep -oP '(?<=v)\d*?(?=\.)'`-alpine
-  - docker pull $alpine
+  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker pull `node --version | grep -oP '(?<=v)\d*?(?=\.)'`-alpine
   - docker run -d -p 127.0.0.1:80:4567 $version-alpine /bin/sh -c "node --version"
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
