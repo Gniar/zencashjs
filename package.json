@@ -46,6 +46,8 @@
     "yargs": "^13.2.4"
   },
   "scripts": {
+    "file": "node --",
+    "audit-ci": "audit-ci --report true",
     "build": "babel src/ -d lib/",
     "dev": "babel --watch src/ -d lib/",
     "clean": "rm -rf ./lib && mkdir lib",
