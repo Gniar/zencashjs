@@ -10,8 +10,8 @@ before_install:
   - version=`node --version | grep -oP '(?<=v)\d*?(?=\.)'`
   - docker run --rm node:$version-alpine /bin/sh -c "cd /home/node && apk add --no-cache git build-base python2 && git clone https://github.com/Gniar/zencashjs.git && cd zencashjs && npm install && npm run test"
 before_script:
-  - if [ $version == 12 ]; then curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter && chmod +x ./cc-test-reporter && ./cc-test-reporter before-build; fi
+  - if [ $version == "12" ]; then curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter && chmod +x ./cc-test-reporter && ./cc-test-reporter before-build; fi
 script:
-  - if [ $version == 12 ]; then npm run coverage && ./cc-test-reporter format-coverage -t lcov .coverage && ./cc-test-reporter upload-coverage -r $CC_TEST_REPORTER_ID; fi
+  - if [ $version == "12" ]; then npm run coverage && ./cc-test-reporter format-coverage -t lcov .coverage && ./cc-test-reporter upload-coverage -r $CC_TEST_REPORTER_ID; fi
 after_script:
-  - if [ $version == 12 ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
+  - if [ $version == "12" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
