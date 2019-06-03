@@ -11,6 +11,7 @@ before_install:
   - docker run --rm node:$version-alpine /bin/sh -c "cd /home/node && apk add --no-cache git build-base python2 && git clone https://github.com/Gniar/zencashjs.git && cd zencashjs && npm install && npm run test"
   - if [ $version == "12" ]; then echo "TEST111"; fi
   - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then echo "TEST222"; fi
+  - if [[ $version == "12" && "${TRAVIS_PULL_REQUEST}" != "false" ]]; then echo "TEST333"; fi
 before_script:
   - if [ $version == "12" ]; then curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter && chmod +x ./cc-test-reporter && ./cc-test-reporter before-build; fi
 script:
