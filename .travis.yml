@@ -12,7 +12,7 @@ before_install:
   - if [ $version == "12" ]; then echo "TEST111"; fi
   - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then echo "TEST222"; fi
   - if [[ $version == "12" && "${TRAVIS_PULL_REQUEST}" != "false" ]]; then echo "TEST333"; fi
-  >- npm i -g audit-ci && curl --request POST --header "Authorization: token $GITHUB_TOKEN" --data '{ "body": `audit-ci --report true` }' https://api.github.com/repos/Gniar/zencashjs/issues/43/comments
+  - "npm i -g audit-ci && curl --request POST --header 'Authorization: token $GITHUB_TOKEN' --data '{ \"body\": `audit-ci --report true` }' https://api.github.com/repos/Gniar/zencashjs/issues/43/comments"
 before_script:
   - if [ $version == "12" ]; then curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter && chmod +x ./cc-test-reporter && ./cc-test-reporter before-build; fi
 script:
