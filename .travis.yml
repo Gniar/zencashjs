@@ -18,4 +18,4 @@ before_script:
 script:
   - if [ $version == "12" ]; then npm run coverage && ./cc-test-reporter format-coverage -t lcov .coverage && ./cc-test-reporter upload-coverage -r $CC_TEST_REPORTER_ID; fi
 after_script:
-  - if [ $version == "12" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
+  - if [ $version == "12" ]; then ./cc-test-reporter after-build -t lcov --exit-code $TRAVIS_TEST_RESULT; fi
