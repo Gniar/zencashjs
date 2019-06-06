@@ -47,7 +47,7 @@
   },
   "scripts": {
     "file": "node --",
-    "audit-ci": "audit-ci --report true",
+    "audit-ci": "audit-ci --report-type full > audit-report && tail -n +2 audit-report | head -n -1",
     "build": "babel src/ -d lib/",
     "dev": "babel --watch src/ -d lib/",
     "clean": "rm -rf ./lib && mkdir lib",
