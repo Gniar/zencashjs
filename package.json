@@ -30,7 +30,7 @@
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "flow-bin": "^0.98.1",
+    "flow-bin": "^0.101.1",
     "int64-buffer": "0.99.1007",
     "libsodium-wrappers-sumo": "^0.7.4",
     "mocha": "^6.1.4",
